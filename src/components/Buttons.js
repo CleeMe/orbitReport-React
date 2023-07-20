@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import satData from "./satData";
 
 const Buttons = ({filterByType, setSat, displaySats}) => {
