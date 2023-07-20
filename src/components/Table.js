@@ -1,3 +1,6 @@
+import React from "react";
+import satData
+ from "./satData";
 const Table = ({ sat }) => {
   return (
       <table>
@@ -10,9 +13,18 @@ const Table = ({ sat }) => {
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <td>Row Data TBD</td>
+          {sat.map((data) => (
+        <tr key = {data.id}>
+          <td>{data.name}</td>
+          <td>{data.satelliteType}</td>
+          <td>{data.launchDate}</td>
+
+{/* I am not sure if I got this one correct.  it looks so clean and I love it but still not
+          certain I get this right */}
+
+          <td>{data.operational ? "Active" : "Inactive "}</td>
         </tr>
+        ))}
         </tbody>
       </table>
   );
