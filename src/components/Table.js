@@ -1,6 +1,6 @@
 import React from "react";
-import satData
- from "./satData";
+import satData from "./satData";
+
 const Table = ({ sat }) => {
   return (
       <table>
@@ -16,7 +16,7 @@ const Table = ({ sat }) => {
           {sat.map((data) => (
         <tr key = {data.id}>
           <td>{data.name}</td>
-          <td>{data.satelliteType}</td>
+          <td>{data.type}</td>
           <td>{data.launchDate}</td>
 
 {/* I am not sure if I got this one correct.  it looks so clean and I love it but still not
